@@ -6,19 +6,18 @@
 // corresponding value
 
 function createListOfObjects(arr){
+  var newArr = [];
 
-var newArr = [];
+  for(var i = 0; i < arr.length; i++){
+      var newStr = arr[i].split(' ');
+      var newObj = {
+        firstName: newStr[0],
+        lastName: newStr[1]
+      }
 
-for(var i = 0; i < arr.length; i++){
-      var newObj = {};
-      var firstArr = arr.slice([i], [i + 1]);
-      var firstStr = firstArr[0];
-      var newStr = firstStr.split(' ');
-      newObj.firstName = newStr[0];
-      newObj.lastName = newStr[1];
       newArr.push(newObj);
   }
-return newArr;
+  return newArr;
 }
 
 //*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
